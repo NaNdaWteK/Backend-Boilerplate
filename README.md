@@ -30,15 +30,6 @@ To use the app, you can use:
 yarn test
 ```
 
-## Serve
-
-To deploy the app run:
-
-```sh
-yarn build
-yarn serve
-```
-
 Check out the `dist` directory for deployment in each environment.
 
 You should automate the copy of the bundle file.
