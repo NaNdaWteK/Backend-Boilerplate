@@ -18,7 +18,8 @@ is changed.
 To use the app, you can use:
 
 ```sh
-yarn start
+yarn build
+yarn serve
 ```
 
 ## Test
@@ -26,7 +27,7 @@ yarn start
 To use the app, you can use:
 
 ```sh
-yarn start
+yarn test
 ```
 
 ## Serve
