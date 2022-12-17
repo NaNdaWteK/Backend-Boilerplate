@@ -1,0 +1,27 @@
+version: '3.3'
+
+services:
+  billar-postgres-test:
+    image: postgres:14.4
+    container_name: billar-postgres-test
+    ports:
+      - '5438:5438'
+    expose:
+      - '5438'
+    restart: unless-stopped
+    volumes:
+      - ./databases/postgres/:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_USER=billar
+      - POSTGRES_PASSWORD=billar
+      - POSTGRES_DB=billar-database
+      - POSTGRES_PORT=5438
+    networks:
+      - nginxproxy_billar
+    command:
+      - '-p 5438'
+
+networks:
+  nginxproxy_billar:
+    external:
+      name: nginxproxy_billar

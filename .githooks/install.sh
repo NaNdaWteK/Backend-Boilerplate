@@ -1,0 +1,3 @@
+
+echo Installing git hooks...
+cp .githooks/pre-commit .git/hooks
